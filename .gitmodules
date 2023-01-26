@@ -1,0 +1,6 @@
+[submodule "fragvisor-linux"]
+	path = fragvisor-linux
+	url = git@github.com:systems-nuts/fragvisor-linux.git
+[submodule "fragvisor-kvmtool"]
+	path = fragvisor-kvmtool
+	url = git@github.com:systems-nuts/fragvisor-kvmtool.git
