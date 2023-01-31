@@ -3,9 +3,8 @@
 
 # Guide to run FragVisor
 
-This guide explains how FragVisor can be setup on a 4 nodes cluster. 
+This guide explains how we run FragVisor on a 4 nodes cluster.
 Indeed, the same instructions apply for smaller and larger clusters, but we fully tested it on 2, 3, and 4 nodes clusters.
-Hardware requirements are listed below.
 For the sake of this guide, we consider a 4 nodes cluster, where nodes are called echo0, echo1, echo4, and echo5. We will use nodes in this exact order:
 * echo5 (first node)
 * echo4
@@ -16,7 +15,17 @@ Note that in the case of a 2 and a 3 nodes cluster, the nodes running FragVisor 
 Finally, FragVisor requires a host (origin) node to start the VM, in this case the host node is echo5.
 
 
+## Hardware Testbed
+
+Our 4 nodes cluster includes 4 identical single Xeon E5-2620 v4 (8/16 cores/threads at 2.1GHz), with 32GB of RAM.
+Each server runs Linux 4.4 as the host kernel.
+Servers are connected via 56Gb InfiniBand using Mellanox Connect-X4 and an Infiniband Switch.
+All servers and the switch are interconnected via 1Gb Ethernet.
+
+
 ## Note about the directory structure
+
+This guide assume that the reader has access to our hardware testbed, and the source-code has been already downloaded to each machine with the following directory structure.
 
 `~/kh$` - contains the kernel code used to start a VM using FragVisor (Each node has its copy of the kernel code. Any change in the kernel code has to be replicated on all the nodes and the kernel is to be installed manually.)
 
