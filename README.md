@@ -1,24 +1,34 @@
 ﻿The FragVisor Aggregate VM Hypervisor
 
+
 # Guide to run FragVisor
 
-The following guide explains how FragVisor can be initialized on 4 nodes. The same can be extended to 2 and 3 nodes as well. For the sake of simplicity, we can consider the four nodes that are being used to start the FragVisor VM are echo5, echo4, echo0, and echo1. (In the case of 2 and 3 nodes, the nodes running FragVisor would be in the same given order.)
+This guide explains how FragVisor can be setup on a 4 nodes cluster. 
+Indeed, the same instructions apply for smaller and larger clusters, but we fully tested on 2, 3, and 4 nodes clusters.
+For the hardware requirements, see below.
+For the sake of this guide, we consider a 4 nodes cluster, where nodes are called echo0, echo1, echo4, and echo5. We will use nodes in this exact order:
+* echo5 (first node)
+* echo4
+* echo0
+* echo1 (last node)
 
-FragVisor requires a host (origin) node to start the VM, in this case the host node is echo5.
+Note that in the case of a 2 and a 3 nodes cluster, the nodes running FragVisor would be in the same given order.
+Finally, FragVisor requires a host (origin) node to start the VM, in this case the host node is echo5.
 
-## Information about directories:
+
+## Directory structure
 
 `~/kh$` - contains the kernel code used to start a VM using FragVisor (Each node has its copy of the kernel code. Any change in the kernel code has to be replicated on all the nodes and the kernel is to be installed manually.)
 `~/c$` - contains source code for FragVisor kvmtool and ramdisks. (This can be run only from the host node, however it is being shared with other nodes via NFS)
 
-## Connecting to the echo machines console terminals and Restarting the machines:
+## Connecting to the echo machines console terminals and Restarting the machines
 
 
 In the case of echo machines, we use echo5, echo4, echo0, and echo1.
 
 	ipmitool -I lanplus -H echo5-ipmi -U ssrg -P rtlabuser1% sol activate
 
-Restarting the echo machines via IPMI:
+Restarting an echo machines via IPMI:
 
 	ipmitool -I lanplus -H echo<num>-ipmi -U ssrg -P rtlabuser1%  power cycle
 
