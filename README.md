@@ -1,4 +1,8 @@
-﻿The FragVisor Aggregate VM Hypervisor
+# FragVisor: the Resource-borrowing Hypervisor
+ 
+To cite FragVisor please use: 
+
+"Aggregate VM: Why Reduce or Evict VM’s Resources When You Can Borrow Them From Other Nodes?", Ho-Ren Chuang (Virginia Tech), Karim Manaouil (University of Edinburgh), Tong Xing (University of Edinburgh), Antonio Barbalace (University of Edinburgh), Pierre Olivier (University of Manchester), Balvansh Heerekar (Virginia Tech), Binoy Ravindran (Virginia Tech), EuroSys'23, Rome, Italy, May 8-12, 2023 
 
 
 # Guide to run FragVisor
