@@ -1,5 +1,5 @@
 # Project Fragvisor
-<img src="../fragvisor-kvmtool/blob/master/frag.png" alt="Fragvisor" width="150" height="150"> 
+<img src=https://github.com/systems-nuts/fragvisor-kvmtool/blob/master/frag.png" alt="Fragvisor" width="150" height="150"> 
 
 # FragVisor: the Resource-borrowing Hypervisor
  
